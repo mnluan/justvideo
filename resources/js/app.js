@@ -1,9 +1,12 @@
 function embedVideo() {
+    var height = window.screen.height * 0.75;
+    var width = window.screen.width * 0.75;
+
     var videoUrl = document.getElementById('videoUrl').value;
     var videoId = extractVideoId(videoUrl);
 
     if (videoId) {
-        var embedCode = '<iframe width="1280" height="720" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
+        var embedCode = '<iframe width="'+ width +'" height="'+ height +'" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>';
         document.getElementById('player').innerHTML = embedCode;
         document.getElementById('title').innerHTML = "";
     } else {
