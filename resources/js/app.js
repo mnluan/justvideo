@@ -19,6 +19,10 @@ function restart(){
     location.reload();
 }
 
+function erase(){
+    document.getElementById('videoUrl').value = "";
+}
+
 function extractVideoId(url) {
     // Alterar a expressão regular para incluir os shorts
     var regExp = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|\?v=|shorts\/)([^#\&\?]*).*/;

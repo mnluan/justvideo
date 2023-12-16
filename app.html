@@ -13,8 +13,9 @@
     <h2 id="title">YouTube Video Player</h2>
     <div id="box">
         <input type="text" id="videoUrl" placeholder="Paste link here">
-        <button id="embedButton" onclick="embedVideo()">➤</button>
-        <button id="embedButton" onclick="restart()">↺</button>
+        <button id="embedButton" onclick="embedVideo()" title="Play">➤</button>
+        <button id="embedButton" onclick="erase()" title="Erase">←</button>
+        <button id="embedButton" onclick="restart()" title="Restart">↺</button>
     </div>
 
     <div id="player"></div>
