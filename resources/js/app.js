@@ -23,6 +23,15 @@ function erase(){
     document.getElementById('videoUrl').value = "";
 }
 
+async function paste(){
+    try{
+        let texto = await navigator.clipboard.readText();
+        document.getElementById('videoUrl').value = texto;
+    }catch(error){
+        console.error("Error: " + error);
+    }
+}
+
 function extractVideoId(url) {
     // Alterar a expressão regular para incluir os shorts
     var regExp = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|\?v=|shorts\/)([^#\&\?]*).*/;
